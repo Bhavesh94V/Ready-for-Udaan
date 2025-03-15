@@ -1,0 +1,40 @@
+@keyframes rotateSemiCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotateSemiCircle 8s linear infinite;
+  /* Slow rotation */
+}
+
+@keyframes slideLeftRight {
+  0% {
+    right: 2px;
+  }
+
+  50% {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  100% {
+    right: 2px;
+  }
+}
+
+.animate-slide {
+  animation: slideLeftRight 8s ease-in-out infinite alternate;
+}
+
+.aboutPattern {
+  background-image: url("../imgs/Pages/pattern1.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 60%;
+}

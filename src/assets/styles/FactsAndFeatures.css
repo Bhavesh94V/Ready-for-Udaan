@@ -1,0 +1,43 @@
+.counter-wrapper {
+  background: url('../imgs/FactsAndFeatures/counter.jpg') top center/cover no-repeat;
+  position: relative;
+  padding: 50px 0;
+}
+
+.counter-wrapper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.counter-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.counter-box {
+  padding: 40px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.counter-box:hover {
+  transform: translateY(-5px);
+}
+
+.count-icon {
+  font-size: 48px;
+  color: #06A3DA;
+}
+
+.count {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
