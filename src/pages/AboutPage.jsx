@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Pages/AboutPage.css';
-import bgImage from '../assets/imgs/AboutArea/bginner.jpg';
-import australiaImg from '../assets/imgs/Pages/australia.jpg';
-import unitedStatesImg from '../assets/imgs/Pages/unitedtStates.jpg';
-import losAngelesImg from '../assets/imgs/Pages/losAngelus.jpg';
 import dubaiImg from '../assets/imgs/Pages/dubai.jpg';
 import WOW from 'wowjs';
 import 'animate.css';
 import PagesImage from '../assets/imgs/Pages/PagesImage';
 import FAQSection from '../components/FAQSection';
+import aboutUs from '../../src/assets/imgs/About-us/aboutUs.png'
 
 export default function AboutPage() {
 
@@ -24,7 +21,7 @@ export default function AboutPage() {
     {
       name: "Emma",
       role: "Visa Specialist",
-      imgSrc: 'https://img.freepik.com/free-photo/portrait-friendly-looking-happy-attractive-male-model-with-moustache-beard-wearing-trendy-transparent-glasses-smiling-broadly-while-listening-interesting-story-waiting-mom-give-meal_176420-22400.jpg?uid=R183500011&ga=GA1.1.1860702175.1736869206&semt=ais_hybrid',
+      imgSrc: PagesImage.client1,
       facebookLink: "",
       instagramLink: "",
       twitterLink: "",
@@ -32,7 +29,7 @@ export default function AboutPage() {
     {
       name: "Robert",
       role: "Legal Advisor",
-      imgSrc: 'https://img.freepik.com/free-photo/picture-dissatisfied-grumpy-young-afro-american-woman-with-long-straight-hair-expressing-her-disagreement-keeping-arms-folded-looking-with-serious-skeptical-facial-expression_344912-1026.jpg?uid=R183500011&ga=GA1.1.1860702175.1736869206&semt=ais_hybrid',
+      imgSrc: PagesImage.client2,
       facebookLink: "",
       instagramLink: "",
       twitterLink: "",
@@ -40,7 +37,7 @@ export default function AboutPage() {
     {
       name: "Chris",
       role: "Career Guide",
-      imgSrc: 'https://img.freepik.com/free-photo/beautiful-male-half-length-portrait-isolated-white-studio-background-young-emotional-hindu-man-blue-shirt-facial-expression-human-emotions-advertising-concept-standing-smiling_155003-25250.jpg?uid=R183500011&ga=GA1.1.1860702175.1736869206&semt=ais_hybrid',
+      imgSrc: PagesImage.client3,
       facebookLink: "",
       instagramLink: "",
       twitterLink: "",
@@ -48,124 +45,20 @@ export default function AboutPage() {
     {
       name: "Scarlett",
       role: "Investment Expert",
-      imgSrc: 'https://img.freepik.com/free-photo/young-smiling-man-with-crossed-arms-white_231208-13001.jpg?uid=R183500011&ga=GA1.1.1860702175.1736869206&semt=ais_hybrid',
+      imgSrc: PagesImage.client4,
       facebookLink: "",
       instagramLink: "",
       twitterLink: "",
     },
   ];
 
-  const faq1 = [
-    {
-      question: "What is Udaan, and how does it work?",
-      answer:
-        "Udaan is an immigration and visa consultancy service that helps individuals with Work Visa, Study Visa, and Visitor Visa applications. We assist in document preparation, application submission, and approval processes.",
-    },
-    {
-      question: "Which visas does Udaan support?",
-      answer:
-        "Udaan specializes in Work Visa, Study Visa, and Visitor Visa services, ensuring a smooth application process for our clients.",
-    },
-    {
-      question: "How long does the visa application process take?",
-      answer:
-        "The processing time depends on the visa type and country. Work and Study Visas may take several weeks, while Visitor Visas are usually processed faster. We provide estimated timelines during consultation.",
-    },
-    {
-      question: "What documents are required for a visa application?",
-      answer:
-        "The required documents vary by visa type but generally include a valid passport, financial proof, educational certificates (for Study Visa), job offer letter (for Work Visa), and other supporting documents.",
-    },
-  ];
-
-  const faq2 = [
-    {
-      question: "Does Udaan guarantee visa approval?",
-      answer:
-        "While we ensure the best guidance and accurate documentation, visa approval depends on the respective country’s immigration policies. However, we maximize your chances of approval with expert consultation.",
-    },
-    {
-      question: "How can I track my visa application status?",
-      answer:
-        "Once your application is submitted, we provide regular updates and tracking details. You can also contact our team for the latest status of your application.",
-    },
-    {
-      question: "Does Udaan provide post-visa assistance?",
-      answer:
-        "Yes, we offer post-visa assistance, including travel guidance, accommodation help, and any other support needed after visa approval.",
-    },
-    {
-      question: "How do I get started with Udaan?",
-      answer:
-        "Simply book a consultation with us, and our experts will guide you through the entire process, from eligibility assessment to application submission.",
-    },
-  ];
-
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const images = [
-    {
-      src: australiaImg,
-      alt: 'Australia',
-      text: 'Experience the stunning landscapes, unique wildlife, and vibrant cities of Australia.',
-      link: '/Australia'
-    },
-    {
-      src: unitedStatesImg,
-      alt: 'United States',
-      text: 'Explore the diverse culture, innovation, and iconic landmarks of the United States.',
-      link: '/country/USA'
-    },
-    {
-      src: losAngelesImg,
-      alt: 'Los Angeles',
-      text: 'Discover the glamour of Hollywood, sunny beaches, and cultural diversity in Los Angeles.',
-      link: '/LosAngeles'
-    },
-    {
-      src: dubaiImg,
-      alt: 'Dubai',
-      text: 'A global hub of luxury, modern architecture, and endless business opportunities.',
-      link: '/Dubai'
-    },
-    {
-      src: australiaImg,
-      alt: 'Australia',
-      text: 'From the Great Barrier Reef to the Outback, Australia offers breathtaking experiences.',
-      link: '/Australia'
-    },
-    {
-      src: unitedStatesImg,
-      alt: 'United States',
-      text: 'A land of opportunities, diverse landscapes, and world-renowned attractions.',
-      link: '/USA'
-    },
-    {
-      src: losAngelesImg,
-      alt: 'Los Angeles',
-      text: 'The entertainment capital, famous for movies, tech startups, and lively culture.',
-      link: '/LosAngeles'
-    },
-    {
-      src: dubaiImg,
-      alt: 'Dubai',
-      text: 'Where tradition meets innovation – home to world-class skyscrapers and attractions.',
-      link: '/Dubai'
-    }
-  ];
-
-
   return (
-    <div className="AboutPageMain md:mt-5 pt-5 bg-transparent" style={{ backgroundImage: ` url(${bgImage}) ` }}>
+    <div className="AboutPageMain md:mt-5 pt-5 bg-transparent">
       <div className="about-section-container mt-5">
 
         <div className="relative w-full">
           <div
-            className="w-full h-[300px] md:h-[350px] lg:h-[400px] bg-cover bg-center rounded-2xl overflow-hidden relative"
+            className="w-full h-[300px] md:h-[350px] lg:h-[400px] bg-cover bg-center overflow-hidden relative"
             style={{ backgroundImage: `url(${PagesImage.careerImage})` }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#064974bb] to-[#06a2da99] backdrop-blur-sm flex flex-col justify-center items-center text-white text-center px-6 transition-all duration-500">
@@ -192,7 +85,7 @@ export default function AboutPage() {
               <div className="relative flex flex-col items-center">
 
                 <img
-                  src="https://img.freepik.com/free-vector/design-community-concept-illustration_114360-1402.jpg?uid=R183500011&ga=GA1.1.1860702175.1736869206&semt=ais_hybrid"
+                  src={aboutUs}
                   alt="Business Discussion"
                   className="w-full max-w-[650px] h-auto rounded-lg sm:w-[80%] md:w-[600px]"
                 />
@@ -208,16 +101,8 @@ export default function AboutPage() {
                 Global Success Starts With Right Guidance
               </h2>
               <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed">
-                <strong>Ready for Udaan</strong> is more than just an immigration consultancy—we are your
-                <strong> strategic partners</strong> in achieving global success. Whether you aspire to study, work,
-                or settle abroad, our expert guidance ensures a <strong>smooth, efficient, and successful transition</strong>.
+                <strong>Ready for Udaan</strong> is your trusted immigration partner, ensuring a <strong>smooth and stress-free</strong> journey to study, work, or settle abroad. With <strong>expert guidance</strong> and a commitment to excellence, we simplify the process, turning your dreams into reality.
               </p>
-              <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed">
-                With years of experience and a commitment to excellence, we simplify the immigration process, ensuring
-                every step is <strong>transparent, stress-free, and efficient</strong>. Our team of experts works
-                tirelessly to turn your dreams into reality.
-              </p>
-
 
               <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-6">
                 <li className="flex flex-col items-center bg-white shadow-md cursor-pointer rounded-lg p-4 md:p-6 w-full transition-all duration-300 hover:shadow-xl hover:scale-105">
@@ -249,9 +134,15 @@ export default function AboutPage() {
               </ul>
 
               <div className="flex flex-col md:flex-row gap-4">
-                <button className="bg-[#064974] hover:bg-[#1b6b9c] text-white px-4 md:px-6 py-3 md:py-3 rounded-md text-sm md:text-base font-semibold shadow-lg transition-all duration-300">
-                  <i className="fa-solid fa-phone mr-2"></i> Call Us Today!
-                </button>
+
+                <Link to='/BookNowPage'>
+
+                  <button className="bg-[#064974] hover:bg-[#1b6b9c] text-white px-4 md:px-6 py-3 md:py-3 rounded-md text-sm md:text-base font-semibold shadow-lg transition-all duration-300">
+                    <i className="fa-solid fa-phone mr-2"></i> Book Appointment Today!
+                  </button>
+
+                </Link>
+
               </div>
             </div>
 
@@ -318,9 +209,11 @@ export default function AboutPage() {
                   From visas to settlement, we make your immigration process simple, fast, and hassle-free.
                   Let’s turn your dreams into reality!
                 </p>
-                <button className="mt-4 md:mt-5 bg-[#06A3DA] hover:bg-[#1b6b9c] px-4 md:px-5 py-2 rounded-full text-white">
-                  Contact Us Now
-                </button>
+                <Link to='/ContactPage'>
+                  <button className="mt-4 md:mt-5 bg-[#06A3DA] hover:bg-[#1b6b9c] px-4 md:px-5 py-2 rounded-full text-white">
+                    Contact Us Now
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -376,11 +269,12 @@ export default function AboutPage() {
 
             {/* Buttons for Chat and Call */}
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-[#1b6b9c] text-white px-6 py-2 rounded-lg shadow-md hover:bg-[#064974] transition">
-                Contact Us
-              </button>
+              <Link to='/ContactPage'>
+                <button className="bg-[#1b6b9c] text-white px-6 py-2 rounded-lg shadow-md hover:bg-[#064974] transition">
+                  Contact Us
+                </button>
+              </Link>
               <a
-                href="tel:+91 955-864-7487"
                 className="bg-[#1b6b9c] text-white px-6 py-2 rounded-lg shadow-md hover:bg-[#064974] transition"
               >
                 Call Us : +91 955-864-7487

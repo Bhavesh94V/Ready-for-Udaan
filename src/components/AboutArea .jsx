@@ -1,6 +1,7 @@
 import React from "react";
 import consultancy from '../assets/imgs/AboutArea/consultancy.jpg'
 import "../assets/styles/AboutArea.css";
+import { Link } from "react-router-dom";
 
 const AboutArea = () => {
     return (
@@ -49,9 +50,11 @@ const AboutArea = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <button className="mt-6 bg-[#064974] text-white py-3 px-6 rounded-full flex items-center gap-2 hover:bg-[#1b6b9c] transition">
-                        Join Now
-                    </button>
+                    <Link to='/BookNowPage'>
+                        <button className="mt-6 bg-[#064974] text-white py-3 px-6 rounded-full flex items-center gap-2 hover:bg-[#1b6b9c] transition">
+                            Join Now
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Right Image Section */}
@@ -68,10 +71,6 @@ const AboutArea = () => {
                             <p className="badge-text">Successful Clients</p>
                         </div>
                     </div>
-                    {/* Pattern Animation */}
-                    {/* <div className="pattern-container">
-                        <img src={pattern} alt="Pattern Design" className="pattern-animation" />
-                    </div> */}
                 </div>
             </div>
         </section>

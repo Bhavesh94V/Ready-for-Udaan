@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Service-Details/test.css';
 import Service from '../components/Service';
-import service1 from './Service-MiniSlider-Imgs/service3.jpg';
 import WOW from 'wowjs';
 import 'animate.css';
 import EmailForm from './EmailForm';
@@ -49,19 +48,19 @@ export default function Service4() {
                         {/* Left Side - Images */}
                         <div className="grid grid-cols-2 gap-4 m-5">
                             <img
-                                src="https://img.freepik.com/free-photo/american-passport-with-flag_23-2148194396.jpg"
+                                src={PagesImage.s41}
                                 alt="PR Visa Process"
                                 className="rounded-lg border-5 border-[#1b6b9c] shadow-md w-full h-56 object-cover transition-all duration-300 hover:scale-105"
                                 style={{ clipPath: "polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)" }}
                             />
                             <img
-                                src="https://img.freepik.com/free-photo/happy-family-park-with-flag_23-2148456198.jpg"
+                                src={PagesImage.s42}
                                 alt="Family PR Benefits"
                                 className="rounded-lg border-5 border-[#1b6b9c] shadow-md w-full h-56 object-cover transition-all duration-300 hover:scale-105"
                                 style={{ clipPath: "polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%)" }}
                             />
                             <img
-                                src="https://img.freepik.com/free-photo/business-people-discussing-visa-application_23-2148570268.jpg"
+                                src={PagesImage.s43}
                                 alt="Expert PR Consultation"
                                 className="rounded-lg border-5 border-[#1b6b9c] w-full h-64 object-cover shadow-md col-span-2 mx-auto transition-all duration-300 hover:scale-105"
                                 style={{ clipPath: "polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)" }}
@@ -145,7 +144,7 @@ export default function Service4() {
                     <div className="relative mx-auto max-w-7xl rounded-3xl overflow-hidden">
                         <div className="relative">
                             <img
-                                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src={PagesImage.s44}
                                 alt="Sustainable Engineering"
                                 className="w-full h-[500px] rounded object-cover"
                             />
@@ -154,9 +153,7 @@ export default function Service4() {
                                 <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-xl">
                                     Secure Your Future <br /> with Permanent <br /> Residency Solutions.
                                 </h1>
-                                <button className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-200 transition">
-                                    Apply Now
-                                </button>
+
                             </div>
                         </div>
 
@@ -274,7 +271,7 @@ export default function Service4() {
                             {/* Image Section */}
                             <div className="relative rounded-full overflow-hidden flex justify-center items-center">
                                 <div className="relative w-full max-w-sm max-h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-full">
-                                    <img src={service1} className="w-full h-full object-cover rounded-xl transform transition-all duration-500 hover:scale-105" alt="Permanent Residency" />
+                                    <img src={PagesImage.s45} className="w-full h-full object-cover rounded-xl transform transition-all duration-500 hover:scale-105" alt="Permanent Residency" />
                                     <div className="absolute inset-0 bg-[#1b6b9c] opacity-30 hover:opacity-50 transition-all duration-300 rounded-xl"></div>
                                 </div>
                             </div>
@@ -307,11 +304,16 @@ export default function Service4() {
                             {/* Features Right */}
                             <div className="space-y-6">
                                 <div className="feature-item relative flex items-center bg-white p-6 rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 group">
+
                                     <div className="absolute inset-0 bg-[#064974] transition-all duration-500 ease-in-out rounded-2xl scale-0 origin-top-left group-hover:scale-100"></div>
+
                                     <i className="fas fa-handshake text-4xl text-[#B21E24] transition-all duration-300 relative z-10 group-hover:text-white"></i>
+
                                     <div className="ml-5 relative z-10">
                                         <h5 className="text-lg font-semibold text-gray-800 group-hover:text-white">Job & Settlement Support</h5>
+
                                         <p className="text-gray-600 group-hover:text-white text-sm md:text-base">
+
                                             We guide you through job search and settlement options, making your transition to a new country seamless.
                                         </p>
                                     </div>
@@ -355,9 +357,11 @@ export default function Service4() {
                                         Their expert team ensures every step is handled efficiently, providing a seamless experience for applicants.
                                     </p>
 
-                                    <button className="mt-6 bg-white text-[#1D3D50] font-medium px-4 md:px-5 py-2 rounded-lg shadow-md hover:bg-gray-200">
-                                        Apply for PR Now
-                                    </button>
+                                    <Link to='/BookNowPage'>
+                                        <button className="mt-6 bg-white text-[#1D3D50] font-medium px-4 md:px-5 py-2 rounded-lg shadow-md hover:bg-gray-200">
+                                            Apply for PR Now
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -393,9 +397,9 @@ export default function Service4() {
                             </div>
 
                             {/* Image Section */}
-                            <div className="flex-1 hidden md:block w-full">
+                            <div className="flex-1 hidden md:block w-full overflow-hidden">
                                 <img
-                                    src={service1}
+                                    src={PagesImage.s46}
                                     alt="Permanent Residency Process"
                                     className="rounded-xl shadow-lg w-full object-cover max-h-[400px]"
                                 />

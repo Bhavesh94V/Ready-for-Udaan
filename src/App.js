@@ -43,6 +43,7 @@ import Service4 from './Service-Details/Service4';
 import Service5 from './Service-Details/Service5';
 import Service6 from './Service-Details/Service6';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 
 
 function App() {
@@ -119,6 +120,7 @@ function App() {
 
       <BackToTop />
 
+      <WhatsAppButton></WhatsAppButton>
       <Footer></Footer>
     </div>
   );

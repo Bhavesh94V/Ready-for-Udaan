@@ -45,7 +45,7 @@ const PopUpForm = ({ onClose }) => {
     return (
         <div className={`fixed inset-0 z-[100000] flex items-center justify-center bg-gray-900 bg-opacity-60 backdrop-blur-md transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
             <div className={`bg-white mt-5 flex flex-col md:flex-row rounded-3xl shadow-2xl w-[90%] md:w-[700px] relative transition-all duration-300 transform ${isVisible ? "scale-100" : "scale-95"}`}>
-                <div className="md:w-2/4 hidden md:flex flex-col justify-center items-center bg-[#B21E24] text-white p-6">
+                <div className="md:w-2/4 hidden md:flex flex-col justify-center items-center bg-[#064974] text-white p-6">
                     <h2 className="text-2xl font-bold mb-4">Get updates! Enter your email to stay informed.</h2>
                     <ul className="text-sm me-auto space-y-2">
                         <li>✔ Expert Guidance</li>
@@ -63,7 +63,7 @@ const PopUpForm = ({ onClose }) => {
                         {Object.keys(formData).map((field) => (
                             <input key={field} type={field === "email" ? "email" : "text"} name={field} placeholder={field.charAt(0).toUpperCase() + field.slice(1)} value={formData[field]} onChange={handleChange} required className="w-full p-3 border rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500" />
                         ))}
-                        <button type="submit" disabled={loading} className={`w-full p-3 rounded-xl font-semibold transition ${loading ? "bg-gray-400" : "bg-[#B21E24] text-white hover:opacity-90"}`}>
+                        <button type="submit" disabled={loading} className={`w-full p-3 rounded-xl font-semibold transition ${loading ? "bg-gray-400" : "bg-[#064974] text-white hover:opacity-90"}`}>
                             {loading ? "Submitting..." : "Submit"}
                         </button>
                         {message?.text && (

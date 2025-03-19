@@ -164,7 +164,7 @@ export default function Denmark() {
 
         <div className="Country-Paragraph-Section">
           <div className="country-section-image">
-            <img src="https://img.freepik.com/free-photo/beautiful-view-port-colorful-buildings-captured-copenhagen-denmark_181624-8571.jpg?uid=R183500011&ga=GA1.1.1860702175.1736869206&semt=ais_hybrid" alt="Canada Immigration" className='img-fluid mt-5' />
+            <img src={PagesImage.cou5} className='img-fluid mt-5' />
           </div>
           <div className="country-section-content mt-4 p-6">
             <h1 className="text-3xl font-bold text-primary-blue mb-4">Denmark PR & Visa Guide: Everything You Need to Know</h1>
@@ -213,9 +213,11 @@ export default function Denmark() {
               Planning to move to Denmark? Let our experts simplify the process for you. Contact us today for a consultation and take the first step toward your new life in Denmark!
             </p>
 
-            <button className="mt-2 px-6 py-3 bg-[#064974] text-white font-semibold rounded-lg shadow-md hover:bg-primary-red-hover transition-all duration-300 ease-in-out">
-              Contact Us
-            </button>
+            <Link to='/ContactPage'>
+              <button className="mt-2 px-6 py-3 bg-[#064974] text-white font-semibold rounded-lg shadow-md hover:bg-primary-red-hover transition-all duration-300 ease-in-out">
+                Contact Us
+              </button>
+            </Link>
           </div>
 
           <div className="country-section-whyChooseUs mt-5 text-start">

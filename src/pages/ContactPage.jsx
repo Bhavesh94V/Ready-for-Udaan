@@ -38,8 +38,8 @@ export default function ContactPage() {
 
     if (!formData.full_name.trim()) {
       newErrors.full_name = 'Name is required';
-    } else if (!/^[A-Za-z\s]{3,}$/.test(formData.full_name)) {
-      newErrors.full_name = 'Name must be at least 3 letters and contain only alphabets';
+    } else if (!/^[A-Za-z\s]{2,}$/.test(formData.full_name)) {
+      newErrors.full_name = 'Name must be at least 2 letters and contain only alphabets';
     }
 
     if (!formData.email.trim()) {

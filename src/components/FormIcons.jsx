@@ -23,12 +23,12 @@ export default function FormIcons() {
                             onClick={() => navigate(item.path)}
                         >
                             {/* Icon with hover effect */}
-                            <div className="p-3 border-3 border-white rounded-r w-16 h-12 flex items-center justify-center shadow-lg bg-[#B21E24] text-white transition-colors duration-300 group-hover:bg-white">
-                                <Icon className="text-xl group-hover:text-[#B21E24]" />
+                            <div className="p-3 border-3 border-white rounded-r-full w-16 h-12 flex items-center justify-center shadow-lg bg-[#064974] text-white transition-colors duration-300 group-hover:bg-white">
+                                <Icon className="text-xl group-hover:text-[#064974]" />
                             </div>
 
                             {/* Tooltip */}
-                            <span className="hidden group-hover:block text-sm font-semibold text-[#B21E24] bg-white shadow-md px-2 py-1 rounded-md transition-opacity duration-300">
+                            <span className="hidden group-hover:block text-sm font-semibold text-[#1b6b9c] bg-white shadow-md px-2 py-1 rounded-md transition-opacity duration-300">
                                 {item.title}
                             </span>
                         </div>

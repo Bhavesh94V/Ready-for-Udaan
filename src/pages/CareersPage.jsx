@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import '../assets/styles/Opportunity.css'
 import { Link } from 'react-router-dom';
 import Australia from '../assets/imgs/Pages/Country-Images/Country-Images/Australia.png';
@@ -50,6 +50,15 @@ export default function CareersPage() {
 
   const [selectedLocation, setSelectedLocation] = useState(locations[0]);
 
+  const careerRef = useRef(null);
+
+  const scrollTocareer = (event) => {
+    event.preventDefault();
+    if (careerRef.current) {
+      careerRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="CareersPage md:mt-5 pt-5 ">
       <div className="about-section-container mt-5">
@@ -66,7 +75,7 @@ export default function CareersPage() {
               </h1>
 
               <div className="mt-3 flex items-center space-x-2 text-sm md:text-lg font-medium opacity-90">
-                <Link className="text-gray-200 hover:text-white transition duration-300 cursor-pointer">
+                <Link to='/' className="text-gray-200 hover:text-white transition duration-300 cursor-pointer">
                   Home
                 </Link>
                 <span className="text-white">/ Opportunity</span>
@@ -201,13 +210,17 @@ export default function CareersPage() {
                   whileTap={{ scale: 0.95 }}
                   className="bg-[#064974] text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-900 transition"
                 >
-                  Learn More
+                  <Link to='/AboutPage'>
+                    Explore More
+                  </Link>
                 </motion.button>
                 <motion.button
                   whileHover={{ x: 5 }}
-                  className="flex items-center gap-2 text-[#064974] font-semibold hover:underline"
+                  className="text-[#064974] font-semibold hover:underline"
                 >
-                  Explore Opportunities <ArrowRight size={16} />
+                  <a href="#" className='flex items-center gap-2' onClick={scrollTocareer}>
+                    Explore Opportunities <ArrowRight size={16} />
+                  </a>
                 </motion.button>
               </div>
             </motion.div>
@@ -215,7 +228,8 @@ export default function CareersPage() {
         </div>
 
 
-        <div className="OpportunitySection my-5">
+        <div className="OpportunitySection my-5" ref={careerRef}>
+
           <div className="container">
             <div className="content-section my-5">
               <h1 className='font-bold'>Discover Your Perfect Destination <br /> <span className='text-danger'>For a Better Future</span></h1>

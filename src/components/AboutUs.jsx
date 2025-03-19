@@ -3,6 +3,7 @@ import "animate.css";
 import "../assets/styles/Aboutus.css";
 import About2 from "../assets/imgs/About-us/about2.jpg";
 import PagesImage from "../assets/imgs/Pages/PagesImage";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
 
@@ -59,11 +60,13 @@ const AboutUs = () => {
                 </ul>
 
                 {/* CTA Button */}
-                <button className="mt-6 px-4 py-2 text-white text-base md:text-lg font-medium rounded-full shadow-lg transition transform hover:scale-105 wow zoomIn"
-                    data-wow-delay="0.9s"
-                    style={{ backgroundColor: "#064974" }}>
-                    Start Your Journey →
-                </button>
+                <Link to='/CareersPage'>
+                    <button className="mt-6 px-4 py-2 text-white text-base md:text-lg font-medium rounded-full shadow-lg transition transform hover:scale-105 wow zoomIn"
+                        data-wow-delay="0.9s"
+                        style={{ backgroundColor: "#064974" }}>
+                        Start Your Journey →
+                    </button>
+                </Link>
             </div>
         </section>
     );

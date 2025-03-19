@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Service-Details/test.css';
 import Service from '../components/Service';
-import service1 from './Service-MiniSlider-Imgs/service3.jpg';
 import WOW from 'wowjs';
 import 'animate.css';
 import EmailForm from './EmailForm';
@@ -47,19 +46,19 @@ export default function Service2() {
                     <div className="max-w-7xl mb-2 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="grid grid-cols-2 gap-4 m-5">
                             <img
-                                src="https://img.freepik.com/free-photo/statue-liberty-with-cloudy-beautiful-sky_181624-1112.jpg"
+                                src={PagesImage.s21}
                                 alt="Visitor Visa Process"
                                 className="rounded-lg border-5 border-[#1b6b9c] shadow-md w-full h-56 object-cover transition-all duration-300 hover:scale-105"
                                 style={{ clipPath: "polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)" }}
                             />
                             <img
-                                src="https://img.freepik.com/free-photo/ukrainian-passport-online-visa-immigration-citizens-ukraine-travel-concept_169016-66527.jpg"
+                                src={PagesImage.s22}
                                 alt="Passport Assistance"
                                 className="rounded-lg border-5 border-[#1b6b9c] shadow-md w-full h-56 object-cover transition-all duration-300 hover:scale-105"
                                 style={{ clipPath: "polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%)" }}
                             />
                             <img
-                                src="https://img.freepik.com/free-photo/close-up-doctor-writing-prescription_23-2148231340.jpg"
+                                src={PagesImage.s23}
                                 alt="Documentation Support"
                                 className="rounded-lg border-5 border-[#1b6b9c] w-full h-64 object-cover shadow-md col-span-2 mx-auto transition-all duration-300 hover:scale-105"
                                 style={{ clipPath: "polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)" }}
@@ -131,7 +130,7 @@ export default function Service2() {
                     <div className="relative mx-auto max-w-7xl rounded-3xl overflow-hidden">
                         <div className="relative">
                             <img
-                                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src={PagesImage.s24}
                                 alt="Sustainable Engineering"
                                 className="w-full h-[500px] rounded object-cover"
                             />
@@ -140,9 +139,7 @@ export default function Service2() {
                                 <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-xl">
                                     Experience the World <br /> with a Hassle-Free <br /> Visitor Visa
                                 </h1>
-                                <button className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-200 transition">
-                                    Apply Now
-                                </button>
+
                             </div>
                         </div>
 
@@ -234,7 +231,8 @@ export default function Service2() {
                             </ul>
 
                             <div className="mt-6 text-center">
-                                <Link to='/visitor-visa' className="bg-primary-red text-white font-semibold border-2 uppercase text-sm px-6 py-2 rounded-lg shadow-md hover:bg-primary-red-hover transition-all">
+
+                                <Link to='/BookNowPage' className="bg-primary-red text-white font-semibold border-2 uppercase text-sm px-6 py-2 rounded-lg shadow-md hover:bg-primary-red-hover transition-all">
                                     Apply for Visitor Visa
                                 </Link>
                             </div>
@@ -259,7 +257,7 @@ export default function Service2() {
                             {/* Image Section */}
                             <div className="relative rounded-full overflow-hidden flex justify-center items-center">
                                 <div className="relative w-full max-w-sm max-h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-full">
-                                    <img src={service1} className="w-full h-full object-cover rounded-xl transform transition-all duration-500 hover:scale-105" alt="Features" />
+                                    <img src={PagesImage.s25} className="w-full h-full object-cover rounded-xl transform transition-all duration-500 hover:scale-105" alt="Features" />
                                     <div className="absolute inset-0 bg-[#1b6b9c] opacity-30 hover:opacity-50 transition-all duration-300 rounded-xl"></div>
                                 </div>
                             </div>
@@ -339,9 +337,11 @@ export default function Service2() {
                                         making the process smooth and stress-free.
                                     </p>
 
-                                    <button className="mt-6 bg-white text-[#1D3D50] font-medium px-4 md:px-5 py-2 rounded-lg shadow-md hover:bg-gray-200">
-                                        Apply for Visitor Visa
-                                    </button>
+                                    <Link to='/BookNowPage'>
+                                        <button className="mt-6 bg-white text-[#1D3D50] font-medium px-4 md:px-5 py-2 rounded-lg shadow-md hover:bg-gray-200">
+                                            Apply for Visitor Visa
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -379,7 +379,7 @@ export default function Service2() {
                             {/* Image Section */}
                             <div className="flex-1 hidden md:block w-full">
                                 <img
-                                    src={service1}
+                                    src={PagesImage.s26}
                                     alt="Visitor Visa Assistance"
                                     className="rounded-xl shadow-lg w-full object-cover max-h-[400px]"
                                 />
