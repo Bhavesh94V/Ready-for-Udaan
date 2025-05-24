@@ -15,3 +15,8 @@ dist/
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+
+# === BUILD OUTPUT ===
+dist/
+build/

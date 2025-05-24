@@ -44,6 +44,7 @@ import Service5 from './Service-Details/Service5';
 import Service6 from './Service-Details/Service6';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import CustomCursor from './components/CustomCursor';
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
 
   return (
     <div className="App">
+      <CustomCursor></CustomCursor>
       {loading && <AnimatedLoader />}
       <Navbar />
 

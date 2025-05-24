@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "../assets/styles/Footer.css";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhone, FaEnvelope, FaArrowRight, FaPaperPlane } from 'react-icons/fa';
+import brandLogo from '../assets/imgs/Brand-Logo/Brand-Logo4.png';
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -69,8 +70,15 @@ function Footer() {
                             className="footer-logo"
                         >
                             <div className="logo-circle">
-                                <div className="logo-text">U</div>
+                                <div className="bg-white p-1 rounded-full">
+                                    <img
+                                        className="w-[50px] h-auto max-w-full mx-auto"
+                                        src={brandLogo}
+                                        alt="Brand Logo"
+                                    />
+                                </div>
                             </div>
+
                             <h2 className="company-name">
                                 Udaan
                             </h2>

@@ -36,7 +36,7 @@ export default function BookNowPage() {
               <ol class="flex space-x-2">
                 <li>
                   <Link to="/" className="text-[#064974] hover:underline cursor-pointer">
-                    Flourish Immigration
+                    Ready For Udaan
                   </Link>
                 </li>
 

@@ -118,7 +118,7 @@ export default function ServicePage() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-[#064974] text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-900 transition"
+                  className="bg-[#064974] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#b21e23e2] transition"
                 >
                   Contact Us
                 </motion.button>

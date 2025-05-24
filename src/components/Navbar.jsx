@@ -32,61 +32,6 @@ const navbarConfig = {
         {
             name: "Opportunity",
             to: "/CareersPage",
-            dropdown: [
-                {
-                    name: "North America",
-                    to: "/continent/NorthAmerica",
-                    dropdown: [
-                        { name: "Canada", to: "/country/Canada" },
-                        { name: "USA", to: "/country/USA" },
-                        { name: "Mexico", to: "/country/Mexico" }
-                    ],
-                },
-                {
-                    name: "Europe",
-                    to: "/continent/Europe",
-                    dropdown: [
-                        { name: "UK", to: "/country/UK" },
-                        { name: "Germany", to: "/country/Germany" },
-                        { name: "France", to: "/country/France" }
-                    ],
-                },
-                {
-                    name: "Asia",
-                    to: "/continent/Asia",
-                    dropdown: [
-                        { name: "India", to: "/country/India" },
-                        { name: "Japan", to: "/country/Japan" },
-                        { name: "China", to: "/country/China" }
-                    ],
-                },
-                {
-                    name: "South America",
-                    to: "/continent/SouthAmerica",
-                    dropdown: [
-                        { name: "Brazil", to: "/country/Brazil" },
-                        { name: "Argentina", to: "/country/Argentina" },
-                        { name: "Chile", to: "/country/Chile" }
-                    ],
-                },
-                {
-                    name: "Oceania",
-                    to: "/continent/Oceania",
-                    dropdown: [
-                        { name: "Australia", to: "/country/Australia" },
-                        { name: "New Zealand", to: "/country/NewZealand" }
-                    ],
-                },
-                {
-                    name: "Africa",
-                    to: "/continent/Africa",
-                    dropdown: [
-                        { name: "South Africa", to: "/country/SouthAfrica" },
-                        { name: "Egypt", to: "/country/Egypt" },
-                        { name: "Nigeria", to: "/country/Nigeria" }
-                    ],
-                }
-            ],
         },
         {
             name: "Blog",

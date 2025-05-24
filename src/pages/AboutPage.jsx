@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Pages/AboutPage.css';
-import dubaiImg from '../assets/imgs/Pages/dubai.jpg';
 import WOW from 'wowjs';
 import 'animate.css';
 import PagesImage from '../assets/imgs/Pages/PagesImage';
 import FAQSection from '../components/FAQSection';
 import aboutUs from '../../src/assets/imgs/About-us/aboutUs.png'
-
+import ABpage from '../assets/imgs/Pages/ABpage.png'
 export default function AboutPage() {
 
   useEffect(() => {
@@ -137,7 +136,7 @@ export default function AboutPage() {
 
                 <Link to='/BookNowPage'>
 
-                  <button className="bg-[#064974] hover:bg-[#1b6b9c] text-white px-4 md:px-6 py-3 md:py-3 rounded-md text-sm md:text-base font-semibold shadow-lg transition-all duration-300">
+                  <button className="bg-[#064974] hover:bg-[#b21e24] text-white px-4 md:px-6 py-3 md:py-3 rounded-md text-sm md:text-base font-semibold shadow-lg transition-all duration-300">
                     <i className="fa-solid fa-phone mr-2"></i> Book Appointment Today!
                   </button>
 
@@ -151,7 +150,7 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-4 py-12">
           <div className="text-center mb-12 mt-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#064974] uppercase tracking-wide">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#064a74d5] uppercase tracking-wide">
               From Vision to Reality
             </h2>
             <p className="text-[#1b6b9c] text-base md:text-lg mt-2">
@@ -162,7 +161,7 @@ export default function AboutPage() {
           <div className="w-full max-w-[1300px] m-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div className="flex flex-col text-start gap-4 md:gap-6">
               <div className="bg-[#064974] p-4 md:p-6 rounded-xl shadow-md">
-                <h3 className="text-[#06A3DA] font-semibold text-base md:text-lg bg-white px-3 md:px-4 py-2 rounded-lg inline-block">
+                <h3 className="text-[#ff1f27] font-semibold text-base md:text-lg bg-white px-3 md:px-4 py-2 rounded-lg inline-block">
                   Our Vision
                 </h3>
                 <p className="text-white mt-2 text-sm md:text-base">
@@ -171,7 +170,7 @@ export default function AboutPage() {
               </div>
 
               <div className="bg-[#064974] p-4 md:p-6 rounded-xl shadow-md">
-                <h3 className="text-[#06A3DA] font-semibold text-base md:text-lg bg-white px-3 md:px-4 py-2 rounded-lg inline-block">
+                <h3 className="text-[#ff1f27] font-semibold text-base md:text-lg bg-white px-3 md:px-4 py-2 rounded-lg inline-block">
                   Our Mission
                 </h3>
                 <p className="text-white mt-2 text-sm md:text-base">
@@ -181,7 +180,7 @@ export default function AboutPage() {
               </div>
 
               <div className="bg-[#064974] p-4 md:p-6 rounded-xl shadow-md text-white">
-                <h3 className="bg-white text-[#06A3DA] font-semibold text-base md:text-lg px-3 md:px-4 py-2 rounded-lg inline-block">
+                <h3 className="bg-white text-[#ff1f27] font-semibold text-base md:text-lg px-3 md:px-4 py-2 rounded-lg inline-block">
                   Our History
                 </h3>
                 <p className="mt-2 text-sm md:text-base">
@@ -193,7 +192,7 @@ export default function AboutPage() {
             <div
               className="relative text-white p-6 md:p-10 rounded-xl flex flex-col justify-center items-center text-center"
               style={{
-                backgroundImage: "url('https://img.freepik.com/free-photo/businessman-big-office_53876-144319.jpg?uid=R183500011&ga=GA1.1.1860702175.1736869206&semt=ais_hybrid')",
+                backgroundImage: `url(${ABpage})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -210,7 +209,7 @@ export default function AboutPage() {
                   Let’s turn your dreams into reality!
                 </p>
                 <Link to='/ContactPage'>
-                  <button className="mt-4 md:mt-5 bg-[#06A3DA] hover:bg-[#1b6b9c] px-4 md:px-5 py-2 rounded-full text-white">
+                  <button className="mt-4 md:mt-5 bg-[#064974] hover:bg-[#1b6b9c] px-4 md:px-5 py-2 rounded-full text-white">
                     Contact Us Now
                   </button>
                 </Link>
